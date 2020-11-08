@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Set the fit size (fill in the screen size of the device in the design) If the design is based on the size of the iPhone6 ​​(iPhone6 ​​750*1334)
-    ScreenUtil.init(context, designSize: Size(750, 1334), allowFontScaling: false);
+    ScreenUtil.init(designSize: Size(750, 1334), allowFontScaling: false);
     return ExampleWidget(title: 'FlutterScreenUtil Demo');
   }
 }
@@ -41,7 +41,7 @@ class _ExampleWidgetState extends State<ExampleWidget> {
   @override
   Widget build(BuildContext context) {
     //Set the fit size (fill in the screen size of the device in the design) If the design is based on the size of the iPhone6 ​​(iPhone6 ​​750*1334)
-    ScreenUtil.init(context, designSize: Size(750, 1334), allowFontScaling: false);
+    ScreenUtil.init(designSize: Size(750, 1334), allowFontScaling: false);
 
     printScreenInformation();
     return Scaffold(
@@ -130,7 +130,7 @@ class _ExampleWidgetState extends State<ExampleWidget> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.title),
         onPressed: () {
-          ScreenUtil.init(context, designSize: Size(750, 1334), allowFontScaling: false);
+          ScreenUtil.init(designSize: Size(750, 1334), allowFontScaling: false);
           setState(() {});
         },
       ),

@@ -3,6 +3,8 @@
  * email: zhuoyuan93@gmail.com
  */
 
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 
 class ScreenUtil {
@@ -34,8 +36,7 @@ class ScreenUtil {
     return _instance;
   }
 
-  static void init(
-    BuildContext context, {
+  static void init({
     Size designSize = defaultSize,
     bool allowFontScaling = false,
   }) {
@@ -43,7 +44,7 @@ class ScreenUtil {
     _instance
       ..uiSize = designSize
       ..allowFontScaling = allowFontScaling;
-    MediaQueryData mediaQuery = MediaQuery.of(context);
+    MediaQueryData mediaQuery = MediaQueryData.fromWindow(ui.window);
     _pixelRatio = mediaQuery.devicePixelRatio;
     _screenWidth = mediaQuery.size.width;
     _screenHeight = mediaQuery.size.height;
