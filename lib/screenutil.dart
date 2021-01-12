@@ -36,6 +36,10 @@ class ScreenUtil {
     return _instance;
   }
 
+  static bool isInitialized() {
+    return _instance != null;
+  }
+
   static void init({
     Size designSize = defaultSize,
     bool allowFontScaling = false,
